@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-04-15" view-index="0" gantt-divider-location="324" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
+    <description><![CDATA[projet]]></description>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="175" order="0"/>
+        <field id="tpd4" name="Date de début" width="66" order="1"/>
+        <field id="tpd5" name="Date de fin" width="67" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#33ff33 #00ffff #66ff66 #33ffff #00ccff #33ccff #3300ff #0000ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="234" order="0"/>
+        <field id="1" name="Rôle par défaut" width="111" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="e57904c24f684e2b94ab0d92522dc607" name="debut_projet" color="#0000ff" meeting="false" start="2026-03-13" duration="1" complete="100" expand="true">
+            <notes><![CDATA[Objectifs: 
+Repartir les tâches entre chaque membres du groupe, completer les études préalable et faire la recherche d'idée et de solution deja existante.
+
+Méthodes: 
+Répartition des taches et mise en commun des idées deja existante.
+
+Conclusion: 
+distribution des roles terminer, étude préalable terminer, recherche d'idées terminer, listage des composants necessaire fini. Avancement sur les alogorigrammes et des schémas]]></notes>
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" uid="30aadc9a6f194c23b64373648f3da614" name="fin_debut_projet" meeting="true" start="2026-03-16" duration="0" complete="0" expand="true">
+            <depend id="2" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="2" uid="7ec61fc4aa3f4ab8bbec19412ea9bfed" name="reflexion_projet" color="#3300ff" meeting="false" start="2026-03-16" duration="5" complete="100" expand="true">
+            <notes><![CDATA[objectifs:
+Faire les schémas, les algorigrammes, faire le plan d'implementation
+
+Méthodes: 
+Revue des schémas brouillon deja fait pour faire le schéma prototype, algorigramme remis au propre sur "diagramme.net"
+reflexion sur le planning. 
+
+Conclusion:
+Fin de la partie analyse du cahier des charges et plannification. 
+Schéma préliminaire terminé. Dossier github fait. ]]></notes>
+            <depend id="3" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="3" uid="81a5bccabd884a978b3571c531994c1b" name="fin_reflexion" meeting="true" start="2026-03-23" duration="0" complete="0" expand="true">
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+            <depend id="5" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="4" uid="b2ed0f093f8e4ae3b68df8adb6fc45d0" name="Codage_lumiere" color="#33ff33" meeting="false" start="2026-03-23" duration="11" complete="100" expand="true">
+            <notes><![CDATA[objectifs:
+codage de la lumière qui doit etre basse quand y a personne, eteinte le jour et qui s'allume le soir et qui s'allume a 100% quand y aura quelqu'un qui passera a côté. Codage temps d'arrivée du tram.
+
+-verification du code de la lumiere
+
+methodes:
+utilisation de vittascience
+
+conclusion: 
+codage sur vittascience, codage de l'arrivée du tram finit avec test valide]]></notes>
+            <depend id="10" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="10" uid="69eea5d2f76f4a679d6ab52def2b78cd" name="fin codage" meeting="true" start="2026-04-07" duration="0" complete="0" expand="true">
+            <depend id="11" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="11" uid="5b30628353774cfb96e8bba45fa974ef" name="3D lumiere" color="#33ff33" meeting="false" start="2026-04-07" duration="1" complete="100" expand="true">
+            <notes><![CDATA[objectif: faire la 3D des lumires avec détecteur de lumineusité et mouvement.
+
+Méthode: utilisation de tinkercard
+
+
+conclusion: 3D envoyer pour impression
+]]></notes>
+            <depend id="14" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="14" uid="f9d8c19ff949414c96a1331897986b82" name="3D lumiere" meeting="true" start="2026-04-08" duration="0" complete="0" expand="true">
+            <depend id="15" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="15" uid="63544d6bd13c495089f28fe7405dcc18" name="cache_afficheur" color="#33ff33" meeting="false" start="2026-04-08" duration="15" complete="100" expand="true">
+            <notes><![CDATA[objectif: faire le cache de l'afficheur, 
+
+methode: 3D 
+
+
+conclusion:
+cache de l'afficheur fait et impression faite.
+]]></notes>
+            <depend id="16" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="16" uid="29eebc9a0fbe4489b5463ac1edaefd6b" name="cache_afficheur" meeting="true" start="2026-04-29" duration="0" complete="0" expand="true">
+            <depend id="17" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="17" uid="adaf8745799e415b89c5f5ac2621aad1" name="maison" color="#33ff33" meeting="false" start="2026-04-29" duration="10" complete="42" expand="true">
+            <notes><![CDATA[objectifs: faire les maison de la maquette pour cacher les cartes et installer les panneaux solaire.
+
+
+Methodes: utilisation de solid works et oneshape.
+
+
+Conclusion:]]></notes>
+        </task>
+        <task id="5" uid="8a630d28500448648e3f4d7a20b3d912" name="codage_stationnement" color="#00ffff" meeting="false" start="2026-03-23" duration="4" complete="100" expand="true">
+            <notes><![CDATA[objectifs:
+Faire le codage du parking l'ouverture barrière.
+
+méthodes:
+Codage sur vittascience
+-> barrière par prise de ticket avec lumiére 
+
+ 
+conclusion:
+Codage de la barriére fait mais probléme en reel mais la simulation marche. Codage ok et il marche en reel. ]]></notes>
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="6" uid="fda5393f3e3246c494cbaddf05fe1db8" name="fin_codage_barrière" meeting="true" start="2026-03-27" duration="0" complete="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="7" uid="974b6be0143d46bf85c7e6333e841156" name="Réflxion_design_barriere" color="#00ffff" meeting="false" start="2026-03-27" duration="4" complete="90" expand="true">
+            <notes><![CDATA[Objectif:
+faire la 3D du parking pour avoir la taille de l'espacement entre le mur et la barriere, version provisoire, version préimpression a faire sur solidworks.
+Design de la barriére finit. Reste a trouver comment la faire marcher avec le servomoteur
+
+28.5 par 21cm
+
+
+Méthode:
+Utilisation de OneShape pour la découpe laser, SOLIDWORKS pour la mise au propre, et Tinkercard pour la version provisoire et visuel du parking
+
+Conclusion:
+Piece de la barrière finit en 3D. Reste a faire l'impression]]></notes>
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="8" uid="fe21122b4f544d998e70a91cd6305dbe" name="design_fini" meeting="true" start="2026-04-02" duration="0" complete="0" expand="true">
+            <depend id="9" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="9" uid="76343c5d989e448e8ac246b1fe7ed085" name="3D_parking" color="#33ffff" meeting="false" start="2026-04-02" duration="3" complete="100" expand="true">
+            <notes><![CDATA[Objectif: Faire le Parking voiture et velo en 3D
+
+
+Methodes: utilisation de tinkercard
+
+
+conclusion: Parking voiture finis ainsi que le parking vélo]]></notes>
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="12" uid="5c50c4da3e794baa9fa7cfaec957d024" name="fin 3D parking" meeting="true" start="2026-04-07" duration="0" complete="3" expand="true">
+            <depend id="13" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="13" uid="c0aee78a4104444c8fcb01ec3ed6cb9d" name="codage place" color="#00ffff" meeting="false" start="2026-04-07" duration="21" complete="59" expand="true">
+            <notes><![CDATA[objectif: faire le codage du parking/ Barriere 3D design final fait et en impression.
+
+methode: utilisation de vittascience/ oneshape
+
+conclusion:
+probleme de codage avec le detecteur ultrason/ impression de la barriere ]]></notes>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Marius" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Martin" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="5" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="4" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="9" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
