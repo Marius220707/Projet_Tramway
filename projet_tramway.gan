@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-04-15" view-index="0" gantt-divider-location="324" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-04-03" view-index="0" gantt-divider-location="294" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
     <description><![CDATA[projet]]></description>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="175" order="0"/>
-        <field id="tpd4" name="Date de début" width="66" order="1"/>
-        <field id="tpd5" name="Date de fin" width="67" order="2"/>
+        <field id="tpd3" name="Nom" width="166" order="0"/>
+        <field id="tpd4" name="Date de début" width="63" order="1"/>
+        <field id="tpd5" name="Date de fin" width="64" order="2"/>
         <field id="tpd15" name="Notes" width="20" order="3"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="filter.dueTodayTasks" value="false"/>
         <option id="filter.overdueTasks" value="false"/>
         <option id="filter.inProgressTodayTasks" value="false"/>
-        <option id="color.recent"><![CDATA[#33ff33 #00ffff #66ff66 #33ffff #00ccff #33ccff #3300ff #0000ff]]></option>
+        <option id="color.recent"><![CDATA[#0000ff #33ff33 #00ffff #66ff66 #33ffff #00ccff #33ccff #3300ff]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="234" order="0"/>
@@ -113,14 +113,18 @@ cache de l'afficheur fait et impression faite.
         <task id="16" uid="29eebc9a0fbe4489b5463ac1edaefd6b" name="cache_afficheur" meeting="true" start="2026-04-29" duration="0" complete="0" expand="true">
             <depend id="17" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="17" uid="adaf8745799e415b89c5f5ac2621aad1" name="maison" color="#33ff33" meeting="false" start="2026-04-29" duration="10" complete="42" expand="true">
+        <task id="17" uid="adaf8745799e415b89c5f5ac2621aad1" name="maison" color="#33ff33" meeting="false" start="2026-04-29" duration="6" complete="100" expand="true">
             <notes><![CDATA[objectifs: faire les maison de la maquette pour cacher les cartes et installer les panneaux solaire.
 
 
 Methodes: utilisation de solid works et oneshape.
 
 
-Conclusion:]]></notes>
+Conclusion: carte cacher et le batiment fait office de guicher]]></notes>
+            <depend id="19" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="19" uid="8790a4c74b67471a8e016220e82f6482" name="guicher-cache" meeting="true" start="2026-05-07" duration="0" complete="0" expand="true">
+            <depend id="20" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="5" uid="8a630d28500448648e3f4d7a20b3d912" name="codage_stationnement" color="#00ffff" meeting="false" start="2026-03-23" duration="4" complete="100" expand="true">
             <notes><![CDATA[objectifs:
@@ -169,13 +173,24 @@ conclusion: Parking voiture finis ainsi que le parking vélo]]></notes>
         <task id="12" uid="5c50c4da3e794baa9fa7cfaec957d024" name="fin 3D parking" meeting="true" start="2026-04-07" duration="0" complete="3" expand="true">
             <depend id="13" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="13" uid="c0aee78a4104444c8fcb01ec3ed6cb9d" name="codage place" color="#00ffff" meeting="false" start="2026-04-07" duration="21" complete="59" expand="true">
-            <notes><![CDATA[objectif: faire le codage du parking/ Barriere 3D design final fait et en impression.
+        <task id="13" uid="c0aee78a4104444c8fcb01ec3ed6cb9d" name="codage parking" color="#00ffff" meeting="false" start="2026-04-07" duration="22" complete="100" expand="true">
+            <notes><![CDATA[objectif: Regrouper le codage du parking/ Barriere 3D design final fait et en impression.
 
 methode: utilisation de vittascience/ oneshape
 
 conclusion:
-probleme de codage avec le detecteur ultrason/ impression de la barriere ]]></notes>
+Probleme de codage avec le detecteur ultrason/ impression de la barriere. Prototype barriere imprimer avec mauvaise mesure du bloc montant. Probleme de contact avec les elements (servomoteur hs). Code regrouper mais la carte a un moment de vide quand la partie arriere tourne. ]]></notes>
+            <depend id="18" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="18" uid="192c39b2ff6f4c3fb69072338f19398a" name="codage" meeting="true" start="2026-05-07" duration="0" complete="0" expand="true">
+            <depend id="20" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="20" uid="e57add6e863748e8aecf52bc75d68fea" name="maquette" color="#0000ff" meeting="false" start="2026-05-07" duration="10" complete="23" expand="true">
+            <notes><![CDATA[Objectif: Assembler l'ensembles des parties faite et finaliser le numérique.
+
+Méthode: regroupage des parties individuel de chacun. Préparation de la présentation, regroupement du numerique.
+
+Conclusion:]]></notes>
         </task>
     </tasks>
     <resources>
@@ -187,12 +202,14 @@ probleme de codage avec le detecteur ultrason/ impression de la barriere ]]></no
         <allocation task-id="2" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="5" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="7" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="20" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="0" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="2" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="4" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="11" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="9" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="17" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="20" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>
