@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-03-25" view-index="0" gantt-divider-location="295" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-03-13" view-index="0" gantt-divider-location="281" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
     <description><![CDATA[projet]]></description>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="158" order="0"/>
-        <field id="tpd4" name="Date de début" width="60" order="1"/>
-        <field id="tpd5" name="Date de fin" width="61" order="2"/>
+        <field id="tpd3" name="Nom" width="150" order="0"/>
+        <field id="tpd4" name="Date de début" width="57" order="1"/>
+        <field id="tpd5" name="Date de fin" width="58" order="2"/>
         <field id="tpd15" name="Notes" width="20" order="3"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="filter.dueTodayTasks" value="false"/>
@@ -39,7 +39,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" uid="e57904c24f684e2b94ab0d92522dc607" name="debut_projet" color="#0000ff" meeting="false" start="2026-03-13" duration="1" complete="100" expand="true">
+        <task id="0" uid="e57904c24f684e2b94ab0d92522dc607" name="debut_projet" color="#0000ff" meeting="false" start="2026-03-13" duration="1" complete="100" webLink="https%3A%2F%2Fmarius220707.github.io%2F%2FProjet_Tramway%2Fetude_prealable%2Fetude_prealable.jpeg" expand="true">
             <notes><![CDATA[Objectifs: 
 Repartir les tâches entre chaque membres du groupe, completer les études préalable et faire la recherche d'idée et de solution deja existante.
 
@@ -53,7 +53,7 @@ distribution des roles terminer, étude préalable terminer, recherche d'idées 
         <task id="1" uid="30aadc9a6f194c23b64373648f3da614" name="fin_debut_projet" meeting="true" start="2026-03-16" duration="0" complete="0" expand="true">
             <depend id="2" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="2" uid="7ec61fc4aa3f4ab8bbec19412ea9bfed" name="reflexion_projet" color="#3300ff" meeting="false" start="2026-03-16" duration="5" complete="100" expand="true">
+        <task id="2" uid="7ec61fc4aa3f4ab8bbec19412ea9bfed" name="reflexion_projet" color="#3300ff" meeting="false" start="2026-03-16" duration="5" complete="100" webLink="https%3A%2F%2Fmarius220707.github.io%2F%2FProjet_Tramway%2FSchema%2Fschema_projet.jpg" expand="true">
             <notes><![CDATA[objectifs:
 Faire les schémas, les algorigrammes, faire le plan d'implementation
 
@@ -160,7 +160,7 @@ Piece de la barrière finit en 3D. Reste a faire l'impression]]></notes>
         <task id="8" uid="fe21122b4f544d998e70a91cd6305dbe" name="design_fini" meeting="true" start="2026-04-02" duration="0" complete="0" expand="true">
             <depend id="9" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="9" uid="76343c5d989e448e8ac246b1fe7ed085" name="3D_parking" color="#33ffff" meeting="false" start="2026-04-02" duration="3" complete="100" expand="true">
+        <task id="9" uid="76343c5d989e448e8ac246b1fe7ed085" name="3D_parking" color="#33ffff" meeting="false" start="2026-04-02" duration="3" complete="100" webLink="https%3A%2F%2Fmarius220707.github.io%2F%2FProjet_Tramway%2FModel3D%2Fparki%2Fparki3Dmodel.html" expand="true">
             <notes><![CDATA[Objectif: Faire le Parking voiture et velo en 3D
 
 
@@ -185,7 +185,7 @@ Probleme de codage avec le detecteur ultrason/ impression de la barriere. Protot
         <task id="18" uid="192c39b2ff6f4c3fb69072338f19398a" name="codage" meeting="true" start="2026-05-07" duration="0" complete="0" expand="true">
             <depend id="20" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="20" uid="e57add6e863748e8aecf52bc75d68fea" name="maquette" color="#0000ff" meeting="false" start="2026-05-07" duration="10" complete="23" expand="true">
+        <task id="20" uid="e57add6e863748e8aecf52bc75d68fea" name="maquette" color="#0000ff" meeting="false" start="2026-05-07" duration="10" complete="23" webLink="https%3A%2F%2Fmarius220707.github.io%2F%2FProjet_Tramway%2Fmaquette.jpg" expand="true">
             <notes><![CDATA[Objectif: Assembler l'ensembles des parties faite et finaliser le numérique.
 
 Méthode: regroupage des parties individuel de chacun. Préparation de la présentation, regroupement du numerique.
