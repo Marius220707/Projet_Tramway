@@ -115,6 +115,8 @@ mtlLoader.load("./parki.mtl", (materials) => {
       center.y + maxDim * 0.3,
       center.z + cameraZ
     );
+	
+	console.log(camera.position);
 
     // Regard caméra
     camera.lookAt(center);
