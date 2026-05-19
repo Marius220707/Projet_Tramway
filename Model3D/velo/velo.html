@@ -28,16 +28,21 @@
   <div id="scene"></div>
 
   <script type="module">
+
     import * as THREE from "three";
     import { OBJLoader } from "https://unpkg.com/three@0.160.0/examples/jsm/loaders/OBJLoader.js";
     import { MTLLoader } from "https://unpkg.com/three@0.160.0/examples/jsm/loaders/MTLLoader.js";
     import { OrbitControls } from "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js";
 
-    // Scene
+    // =========================
+    // SCENE
+    // =========================
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x222222);
 
-    // Camera
+    // =========================
+    // CAMERA
+    // =========================
     const camera = new THREE.PerspectiveCamera(
       60,
       window.innerWidth / window.innerHeight,
@@ -45,35 +50,65 @@
       1000
     );
 
-    // Vue de face
-    camera.position.set(0, 2, 8);
+    // Caméra reculée + décalée
+    camera.position.set(5, 3, 15);
 
-    // Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    // Regarde le centre
+    camera.lookAt(0, 0, 0);
+
+    // =========================
+    // RENDERER
+    // =========================
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true
+    });
+
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById("scene").appendChild(renderer.domElement);
 
-    // Lumières
-    const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1.5);
+    document
+      .getElementById("scene")
+      .appendChild(renderer.domElement);
+
+    // =========================
+    // LUMIÈRES
+    // =========================
+    const hemiLight = new THREE.HemisphereLight(
+      0xffffff,
+      0x444444,
+      1.5
+    );
+
     scene.add(hemiLight);
 
-    const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+    const dirLight = new THREE.DirectionalLight(
+      0xffffff,
+      2
+    );
+
     dirLight.position.set(5, 10, 7);
+
     scene.add(dirLight);
 
-    // Contrôles
-    const controls = new OrbitControls(camera, renderer.domElement);
+    // =========================
+    // CONTROLS
+    // =========================
+    const controls = new OrbitControls(
+      camera,
+      renderer.domElement
+    );
 
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
 
-    controls.minDistance = 2;
-    controls.maxDistance = 20;
+    controls.minDistance = 5;
+    controls.maxDistance = 50;
 
-    // Centre de rotation
-    controls.target.set(0, 1, 0);
+    // Point visé par la caméra
+    controls.target.set(0, 0, 0);
 
-    // Chargement OBJ + MTL
+    // =========================
+    // CHARGEMENT OBJ
+    // =========================
     const mtlLoader = new MTLLoader();
 
     mtlLoader.load("./obj.mtl", (materials) => {
@@ -81,17 +116,18 @@
       materials.preload();
 
       const objLoader = new OBJLoader();
+
       objLoader.setMaterials(materials);
 
       objLoader.load("./tinker.obj", (obj) => {
 
         // Taille réduite
-        obj.scale.set(1, 1, 1);
+        obj.scale.set(0.5, 0.5, 0.5);
 
-        // Rotation correcte
+        // Rotation
         obj.rotation.x = -Math.PI / 2;
 
-        // Position centrée
+        // Position
         obj.position.set(0, 0, 0);
 
         scene.add(obj);
@@ -100,17 +136,26 @@
 
     });
 
-    // Resize
+    // =========================
+    // RESIZE
+    // =========================
     window.addEventListener("resize", () => {
 
-      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.aspect =
+        window.innerWidth / window.innerHeight;
+
       camera.updateProjectionMatrix();
 
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(
+        window.innerWidth,
+        window.innerHeight
+      );
 
     });
 
-    // Animation
+    // =========================
+    // ANIMATION
+    // =========================
     function animate() {
 
       requestAnimationFrame(animate);
