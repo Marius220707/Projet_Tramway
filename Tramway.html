@@ -9,7 +9,29 @@
 </head>
 
 <body>
+
   <h1>Partie parking</h1>
+  
+  <div class="tabs">
+  <button class="tab-button active" onclick="openTab('tab1')">Onglet 1</button>
+  <button class="tab-button" onclick="openTab('tab2')">Onglet 2</button>
+  <button class="tab-button" onclick="openTab('tab3')">Onglet 3</button>
+</div>
+
+<div id="tab1" class="tab-content active">
+  <h2>Contenu 1</h2>
+  <p>Bienvenue dans l’onglet 1.</p>
+</div>
+
+<div id="tab2" class="tab-content">
+  <h2>Contenu 2</h2>
+  <p>Voici l’onglet 2.</p>
+</div>
+
+<div id="tab3" class="tab-content">
+  <h2>Contenu 3</h2>
+  <p>Voici l’onglet 3.</p>
+</div>
 
   <section id="analyse-cahier-charges">
     <h2>Diagramme de cas d'utilisation</h2>
