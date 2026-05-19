@@ -22,3 +22,27 @@ section {
   border: 2px solid #333;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+.tab-button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  background: #ddd;
+  margin-right: 5px;
+}
+
+.tab-button.active {
+  background: #333;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.tab-content.active {
+  display: block;
+}

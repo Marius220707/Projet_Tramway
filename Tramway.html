@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+
+<script>
+function openTab(tabId) {
+  // cacher tous les contenus
+  const contents = document.querySelectorAll(".tab-content");
+  contents.forEach(tab => tab.classList.remove("active"));
+
+  // enlever active des boutons
+  const buttons = document.querySelectorAll(".tab-button");
+  buttons.forEach(btn => btn.classList.remove("active"));
+
+  // afficher le bon onglet
+  document.getElementById(tabId).classList.add("active");
+
+  // activer le bouton cliqué
+  event.target.classList.add("active");
+}
+</script>
+
 <html>
 
 <head>
@@ -16,39 +35,37 @@
   <button class="tab-button active" onclick="openTab('tab1')">Onglet 1</button>
   <button class="tab-button" onclick="openTab('tab2')">Onglet 2</button>
   <button class="tab-button" onclick="openTab('tab3')">Onglet 3</button>
+  <button class="tab-button" onclick="openTab('tab4')">Onglet 4</button>
+  <button class="tab-button" onclick="openTab('tab5')">Onglet 5</button>
 </div>
 
 <div id="tab1" class="tab-content active">
-  <h2>Contenu 1</h2>
+  <h2>Analyse du cahier des charges</h2>
+  <h3>Diagramme de cas d'utilisation</h3>
   <p>Bienvenue dans l’onglet 1.</p>
 </div>
 
 <div id="tab2" class="tab-content">
-  <h2>Contenu 2</h2>
+  <h2>Conposants et fournitures</h2>
   <p>Voici l’onglet 2.</p>
 </div>
 
 <div id="tab3" class="tab-content">
-  <h2>Contenu 3</h2>
+  <h2>Conception détaillee</h2>
   <p>Voici l’onglet 3.</p>
 </div>
 
-  <section id="analyse-cahier-charges">
-    <h2>Diagramme de cas d'utilisation</h2>
-    <p>.</p>
+<div id="tab4" class="tab-content">
+  <h2>Maquette</h2>
+  <p>Voici l’onglet 3.</p>
+</div>
 
-    <h2>Diagrammes des exigences et bloc</h2>
+<div id="tab5" class="tab-content">
+  <h2>Vidéo</h2>
+  <p>Voici l’onglet 3.</p>
+</div>
 
-    <h2>Analyse des solutions existantes</h2>
-
-    <h2>Répartition des tâches</h2>
-
-    <h2>Planning et organisation du groupe</h2>
-  </section>
-
-  <section id="conception">
-    <h2>Liste des composants</h2>
-  </section>
+ 
 
 </body>
 </html>
