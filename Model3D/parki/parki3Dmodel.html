@@ -29,9 +29,9 @@
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(
-      0,
+      75,
       window.innerWidth / window.innerHeight,
-      0.01,
+      0.1,
       1000
     );
 
@@ -72,63 +72,21 @@
     // Chargement du modèle OBJ
 	
 	const mtlLoader = new MTLLoader();
+	mtlLoader.load("./parki.mtl", (materials) => {
+	  materials.preload();
 
-mtlLoader.load("./parki.mtl", (materials) => {
+	  const objLoader = new OBJLoader();
+	  objLoader.setMaterials(materials);
+	  objLoader.load("./parki.obj", (obj) => {
+		obj.scale.set(0.007, 0.007, 0.007);
+		obj.rotation.y += Math.PI / 2;
+		obj.position.x -= 0.5;
+		//obj.position.y -= 1;
 
-  materials.preload();
-
-  const objLoader = new OBJLoader();
-
-  objLoader.setMaterials(materials);
-
-  objLoader.load("./parki.obj", (obj) => {
-
-    // Rotation éventuelle
-    //obj.rotation.y += Math.PI / 2;
-
-    scene.add(obj);
-
-    // =========================
-    // AUTO FIT CAMERA
-    // =========================
-
-    const box = new THREE.Box3().setFromObject(obj);
-
-    const center = box.getCenter(new THREE.Vector3());
-
-    const size = box.getSize(new THREE.Vector3());
-
-    // Taille maximale du modèle
-    //const maxDim = Math.max(size.x, size.y, size.z);
-
-    // Champ de vision caméra
-    //const fov = camera.fov * (Math.PI / 180);
-
-    // Distance idéale
-    //let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
-
-    cameraZ *= 1.8; // marge supplémentaire
-
-    // Position caméra
-    camera.position.set(
-      0.07500000298023224,
-      0.05918500162661075,
-      0.3842498610147132
-    );
+		scene.add(obj);
+	  });
+	});
 	
-	console.log(camera.position);
-
-    // Regard caméra
-    camera.lookAt(center);
-
-    // OrbitControls cible
-    controls.target.copy(center);
-
-    controls.update();
-
-  });
-
-});
 
 
     // Adaptation à la taille de la fenêtre
