@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-03-05" view-index="0" gantt-divider-location="267" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-03-02" view-index="0" gantt-divider-location="267" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
     <description><![CDATA[projet]]></description>
     <view zooming-state="default:2" id="gantt-chart">
         <field id="tpd3" name="Nom" width="142" order="0"/>
@@ -149,7 +149,7 @@ Codage de la barriére fait mais probléme en reel mais la simulation marche. Co
         <task id="6" uid="fda5393f3e3246c494cbaddf05fe1db8" name="fin_codage_barrière" meeting="true" start="2026-03-27" duration="0" complete="0" expand="true">
             <depend id="7" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="7" uid="974b6be0143d46bf85c7e6333e841156" name="Réflxion_design_barriere" color="#00ffff" meeting="false" start="2026-03-27" duration="4" complete="100" expand="true">
+        <task id="7" uid="974b6be0143d46bf85c7e6333e841156" name="Réflxion_design_barriere" color="#00ffff" meeting="false" start="2026-03-27" duration="4" complete="100" webLink="https%3A%2F%2Fmarius220707.github.io%2F%2FProjet_Tramway%2FModel3D%2Fbarriere.png" expand="true">
             <notes><![CDATA[Objectif:
 faire la 3D du parking pour avoir la taille de l'espacement entre le mur et la barriere, version provisoire, version préimpression a faire sur solidworks.
 Design de la barriére finit. Reste a trouver comment la faire marcher avec le servomoteur
@@ -180,7 +180,7 @@ conclusion: Parking voiture finis ainsi que le parking vélo]]></notes>
         <task id="12" uid="5c50c4da3e794baa9fa7cfaec957d024" name="fin 3D parking" meeting="true" start="2026-04-07" duration="0" complete="3" expand="true">
             <depend id="13" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="13" uid="c0aee78a4104444c8fcb01ec3ed6cb9d" name="codage parking" color="#00ffff" meeting="false" start="2026-04-07" duration="22" complete="100" expand="true">
+        <task id="13" uid="c0aee78a4104444c8fcb01ec3ed6cb9d" name="codage parking" color="#00ffff" meeting="false" start="2026-04-07" duration="22" complete="100" webLink="https%3A%2F%2Fmarius220707.github.io%2F%2FProjet_Tramway%2Fcode_parking.odt" expand="true">
             <notes><![CDATA[objectif: Regrouper le codage du parking/ Barriere 3D design final fait et en impression.
 
 methode: utilisation de vittascience/ oneshape
@@ -195,6 +195,13 @@ Probleme de codage avec le detecteur ultrason/ impression de la barriere. Protot
 methode: utilisation de vittascience
 
 conclusion: jumeau numerique fait ]]></notes>
+        </task>
+        <task id="23" uid="98509a1711e341cf8d860bf43f9e0090" name="3D parking velo" color="#00ffff" meeting="false" start="2026-04-09" duration="2" complete="100" webLink="https%3A%2F%2Fmarius220707.github.io%2F%2FProjet_Tramway%2FModel3D%2F3D_parking_velo.png" expand="true">
+            <notes><![CDATA[objectif: faire le parking velo (batiment)
+
+methode: utilisation de tinkercard
+
+conclusion: design parking velo choisi et imprimé]]></notes>
         </task>
         <task id="18" uid="192c39b2ff6f4c3fb69072338f19398a" name="codage" meeting="true" start="2026-05-07" duration="0" complete="0" expand="true">
             <depend id="20" type="2" difference="0" hardness="Strong"/>
