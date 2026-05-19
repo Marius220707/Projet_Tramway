@@ -84,7 +84,7 @@ mtlLoader.load("./parki.mtl", (materials) => {
   objLoader.load("./parki.obj", (obj) => {
 
     // Rotation éventuelle
-    obj.rotation.y += Math.PI / 2;
+    //obj.rotation.y += Math.PI / 2;
 
     scene.add(obj);
 
@@ -99,21 +99,21 @@ mtlLoader.load("./parki.mtl", (materials) => {
     const size = box.getSize(new THREE.Vector3());
 
     // Taille maximale du modèle
-    const maxDim = Math.max(size.x, size.y, size.z);
+    //const maxDim = Math.max(size.x, size.y, size.z);
 
     // Champ de vision caméra
-    const fov = camera.fov * (Math.PI / 180);
+    //const fov = camera.fov * (Math.PI / 180);
 
     // Distance idéale
-    let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
+    //let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
 
     cameraZ *= 1.8; // marge supplémentaire
 
     // Position caméra
     camera.position.set(
-      center.x,
-      center.y + maxDim * 0.3,
-      center.z + cameraZ
+      0.07500000298023224,
+      0.05918500162661075,
+      0.3842498610147132
     );
 	
 	console.log(camera.position);
