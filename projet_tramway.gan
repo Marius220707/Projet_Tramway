@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-03-13" view-index="0" gantt-divider-location="281" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-03-05" view-index="0" gantt-divider-location="267" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
     <description><![CDATA[projet]]></description>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="150" order="0"/>
-        <field id="tpd4" name="Date de début" width="57" order="1"/>
-        <field id="tpd5" name="Date de fin" width="58" order="2"/>
+        <field id="tpd3" name="Nom" width="142" order="0"/>
+        <field id="tpd4" name="Date de début" width="54" order="1"/>
+        <field id="tpd5" name="Date de fin" width="55" order="2"/>
         <field id="tpd15" name="Notes" width="20" order="3"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="filter.dueTodayTasks" value="false"/>
         <option id="filter.overdueTasks" value="false"/>
         <option id="filter.inProgressTodayTasks" value="false"/>
-        <option id="color.recent"><![CDATA[#0000ff #33ff33 #00ffff #66ff66 #33ffff #00ccff #33ccff #3300ff]]></option>
+        <option id="color.recent"><![CDATA[#00ffff #0000ff #33ff33 #66ff66 #33ffff #00ccff #33ccff #3300ff]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="234" order="0"/>
@@ -49,6 +49,13 @@ Répartition des taches et mise en commun des idées deja existante.
 Conclusion: 
 distribution des roles terminer, étude préalable terminer, recherche d'idées terminer, listage des composants necessaire fini. Avancement sur les alogorigrammes et des schémas]]></notes>
             <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="21" uid="2638480a921343069b73e7a5076ff1ca" name="recherche solution" color="#00ffff" meeting="false" start="2026-03-13" duration="1" complete="100" webLink="https%3A%2F%2Fmarius220707.github.io%2F%2FProjet_Tramway%2Fidee_barriere.odt" expand="true">
+            <notes><![CDATA[objectif: recherche solution
+
+methode: utilisation de google pour chercher des idées deja existante.
+
+conclusion: design choisit pour une barriere montante decendante dans le sol]]></notes>
         </task>
         <task id="1" uid="30aadc9a6f194c23b64373648f3da614" name="fin_debut_projet" meeting="true" start="2026-03-16" duration="0" complete="0" expand="true">
             <depend id="2" type="2" difference="0" hardness="Strong"/>
@@ -181,6 +188,13 @@ methode: utilisation de vittascience/ oneshape
 conclusion:
 Probleme de codage avec le detecteur ultrason/ impression de la barriere. Prototype barriere imprimer avec mauvaise mesure du bloc montant. Probleme de contact avec les elements (servomoteur hs). Code regrouper mais la carte a un moment de vide quand la partie arriere tourne. ]]></notes>
             <depend id="18" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="22" uid="51d78339fb6041a0a379a9e6faa40e5d" name="jumeau numerique" color="#00ffff" meeting="false" start="2026-04-07" duration="2" complete="100" webLink="https%3A%2F%2Fmarius220707.github.io%2F%2FProjet_Tramway%2Fjumeau_numerique.png" expand="true">
+            <notes><![CDATA[objectif: faire le jummelage numerique
+
+methode: utilisation de vittascience
+
+conclusion: jumeau numerique fait ]]></notes>
         </task>
         <task id="18" uid="192c39b2ff6f4c3fb69072338f19398a" name="codage" meeting="true" start="2026-05-07" duration="0" complete="0" expand="true">
             <depend id="20" type="2" difference="0" hardness="Strong"/>
