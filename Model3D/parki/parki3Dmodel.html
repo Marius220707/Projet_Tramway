@@ -37,12 +37,7 @@
 
     window.camera = camera;
 
-    camera.position.set(
-
-0,
-0,
-0
-    );
+camera.position.set(0, 2, 6);
 
 
 
@@ -69,6 +64,7 @@
 	controls.minDistance = 1; // distance minimale de zoom
 	controls.maxDistance = 100; // distance maximale de zoom	
 
+
     // Chargement du modèle OBJ
 	
 	const mtlLoader = new MTLLoader();
@@ -78,9 +74,9 @@
 	  const objLoader = new OBJLoader();
 	  objLoader.setMaterials(materials);
 	  objLoader.load("./parki.obj", (obj) => {
-		obj.scale.set(3, 3, 3);
-		obj.rotation.x -= Math.PI;
-		obj.position.x += 0.1;
+		obj.scale.set(15, 15, 15);
+		obj.rotation.x -= Math.PI/2;
+		obj.position.x += 0.5;
 		obj.position.z += 0.2;
 		
 
