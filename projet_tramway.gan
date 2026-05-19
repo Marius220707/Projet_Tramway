@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-04-03" view-index="0" gantt-divider-location="294" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="projet_tramway" company="" webLink="http://" view-date="2026-03-25" view-index="0" gantt-divider-location="295" resource-divider-location="349" version="3.3.3316" locale="fr_FR">
     <description><![CDATA[projet]]></description>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="166" order="0"/>
-        <field id="tpd4" name="Date de début" width="63" order="1"/>
-        <field id="tpd5" name="Date de fin" width="64" order="2"/>
+        <field id="tpd3" name="Nom" width="158" order="0"/>
+        <field id="tpd4" name="Date de début" width="60" order="1"/>
+        <field id="tpd5" name="Date de fin" width="61" order="2"/>
         <field id="tpd15" name="Notes" width="20" order="3"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="filter.dueTodayTasks" value="false"/>
@@ -142,7 +142,7 @@ Codage de la barriére fait mais probléme en reel mais la simulation marche. Co
         <task id="6" uid="fda5393f3e3246c494cbaddf05fe1db8" name="fin_codage_barrière" meeting="true" start="2026-03-27" duration="0" complete="0" expand="true">
             <depend id="7" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="7" uid="974b6be0143d46bf85c7e6333e841156" name="Réflxion_design_barriere" color="#00ffff" meeting="false" start="2026-03-27" duration="4" complete="90" expand="true">
+        <task id="7" uid="974b6be0143d46bf85c7e6333e841156" name="Réflxion_design_barriere" color="#00ffff" meeting="false" start="2026-03-27" duration="4" complete="100" expand="true">
             <notes><![CDATA[Objectif:
 faire la 3D du parking pour avoir la taille de l'espacement entre le mur et la barriere, version provisoire, version préimpression a faire sur solidworks.
 Design de la barriére finit. Reste a trouver comment la faire marcher avec le servomoteur
