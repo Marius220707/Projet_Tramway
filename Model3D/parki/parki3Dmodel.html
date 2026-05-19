@@ -39,9 +39,9 @@
 
     camera.position.set(
 
-1.0294498737997984,
-1,
-2
+0,
+0,
+0
     );
 
 
@@ -78,10 +78,11 @@
 	  const objLoader = new OBJLoader();
 	  objLoader.setMaterials(materials);
 	  objLoader.load("./parki.obj", (obj) => {
-		//obj.scale.set(0.007, 0.007, 0.007);
-		//obj.rotation.y += Math.PI / 2;
-		//obj.position.x -= 0.5;
-		//obj.position.y -= 1;
+		obj.scale.set(3, 3, 3);
+		obj.rotation.x -= Math.PI;
+		obj.position.x += 0.1;
+		obj.position.z += 0.2;
+		
 
 		scene.add(obj);
 	  });
