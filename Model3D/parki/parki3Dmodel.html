@@ -72,21 +72,61 @@
     // Chargement du modèle OBJ
 	
 	const mtlLoader = new MTLLoader();
-	mtlLoader.load("./parki.mtl", (materials) => {
-	  materials.preload();
 
-	  const objLoader = new OBJLoader();
-	  objLoader.setMaterials(materials);
-	  objLoader.load("./parki.obj", (obj) => {
-		obj.scale.set(0.007, 0.007, 0.007);
-		obj.rotation.y += Math.PI / 2;
-		obj.position.x -= 0.5;
-		//obj.position.y -= 1;
+mtlLoader.load("./parki.mtl", (materials) => {
 
-		scene.add(obj);
-	  });
-	});
-	
+  materials.preload();
+
+  const objLoader = new OBJLoader();
+
+  objLoader.setMaterials(materials);
+
+  objLoader.load("./parki.obj", (obj) => {
+
+    // Rotation éventuelle
+    obj.rotation.y += Math.PI / 2;
+
+    scene.add(obj);
+
+    // =========================
+    // AUTO FIT CAMERA
+    // =========================
+
+    const box = new THREE.Box3().setFromObject(obj);
+
+    const center = box.getCenter(new THREE.Vector3());
+
+    const size = box.getSize(new THREE.Vector3());
+
+    // Taille maximale du modèle
+    const maxDim = Math.max(size.x, size.y, size.z);
+
+    // Champ de vision caméra
+    const fov = camera.fov * (Math.PI / 180);
+
+    // Distance idéale
+    let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
+
+    cameraZ *= 1.8; // marge supplémentaire
+
+    // Position caméra
+    camera.position.set(
+      center.x,
+      center.y + maxDim * 0.3,
+      center.z + cameraZ
+    );
+
+    // Regard caméra
+    camera.lookAt(center);
+
+    // OrbitControls cible
+    controls.target.copy(center);
+
+    controls.update();
+
+  });
+
+});
 
 
     // Adaptation à la taille de la fenêtre
