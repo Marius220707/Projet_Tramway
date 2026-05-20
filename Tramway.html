@@ -35,8 +35,8 @@ function openTab(tabId) {
   <div class="tabs">
   <button class="tab-button active" onclick="openTab('tab0')">Répartition</button>
   <button class="tab-button" onclick="openTab('tab1')">Analyse</button>
-  <button class="tab-button" onclick="openTab('tab2')">Onglet 2</button>
-  <button class="tab-button" onclick="openTab('tab3')">Onglet 3</button>
+  <button class="tab-button" onclick="openTab('tab2')">Composants</button>
+  <button class="tab-button" onclick="openTab('tab3')">Codage</button>
   <button class="tab-button" onclick="openTab('tab4')">Maquette</button>
   <button class="tab-button" onclick="openTab('tab5')">Vidéo</button>
   
@@ -49,8 +49,8 @@ function openTab(tabId) {
   
   <h3>Organisation et planning</h3>
   <p>Marius et Martin: <em>13 mars</em>: répartition des tâches et étude préalable faite.<br/>
-  <em>16 mars: Schéma</em><br/>
-  Marius: recherche d'idées pour la barrière du parking. <em>23 mars</em>: codage de la barrière + début codage des places. <em>27 mars</em>: 3D de la barrière + 3D parking. <em>2 avril</em>: fin de la 3D du parking + 3D de l'abris vélo.
+  <em>16 mars</em>: Schéma<br/>
+  Marius: <em>16 mars</em>: recherche d'idées pour la barrière du parking. <em>23 mars</em>: codage de la barrière + début codage des places. <em>27 mars</em>: 3D de la barrière + 3D parking. <em>2 avril</em>: fin de la 3D du parking + 3D de l'abris vélo.
   <em>7 avril</em>: fin du codage des places + regroupement des codes + test avec la barrière. <em>7 mai</em>: regroupement de la partie de maquette et assemblage.<br/>
   Martin: <em>16 mars</em>: Algorigramme. <em>23 mars</em>: codage de la lumière. <em>7 avril</em>: 3d cache lumière. <em>8 avril</em>: codage de l'arrivé du tram + cache de l'afficheur. <em>29 avril</em>: cache de la carte arduino.
   <em>7 mai</em>: regroupement de la partie de la maquette.
@@ -86,21 +86,100 @@ function openTab(tabId) {
 		<img src="images/barriere3.png" class="petite-img">
 		<img src="images/barriere3.jfif" class="petite-img">
 		</div>
+  
 	<p>Choix de la 4ème barrière.</p>
   
 </div>
 
 <div id="tab2" class="tab-content">
   <h2>Conposants et fournitures</h2>
-  <p>Voici l’onglet 2.</p>
+  <div class="conteneur conteneur-grille">
+		<img src="images/bouton.jpg" class="petite-img">
+		<img src="images/servo.jfif" class="petite-img">
+		<img src="images/carte.jfif" class="petite-img">
+		<img src="images/ultrason.jfif" class="petite-img">
+		<img src="images/afficheur.jfif" class="petite-img">
+		</div>
+  
+  <p>Voici les composants nécéssaire pour la partie Parking.</p>
+  
+  <h3>Jumeau numérique</h3>
+  <div class="image-container">
+    <img src="https://marius220707.github.io/Projet_Tramway/jumeau_numerique.png"
+         alt="jumeau numérique">
+  </div>
 </div>
 
 <div id="tab3" class="tab-content">
-  <h2>Conception détaillee</h2>
-  <p>Voici l’onglet 3.</p>
+  <h2>Codage</h2>
+  <p>#include <Servo.h><br/>
+#include <Wire.h><br/>
+#include <rgb_lcd.h><br/>
+#include <Ultrasonic.h><br/>
+<br/>
+<em>Ou sont les composants</em></br>
+#define PIN_SERVO_3  3<br/>
+#define PIN_SIMPLE_BUTTON_4  4<br/>
+#define PIN_ULTRASONIC_8  8<br/>
+#define PIN_ULTRASONIC_7  7<br/>
+<br/>
+Servo servomotor_3;<br/>
+rgb_lcd lcdRgb;<br/>
+Ultrasonic ultrasonic_8(PIN_ULTRASONIC_8);<br/>
+Ultrasonic ultrasonic_7(PIN_ULTRASONIC_7);<br/>
+<br/>
+<em>Initialisation</em></br>
+int liste;<br/>
+<br/>
+void setup() {<br/>
+  servomotor_3.attach(PIN_SERVO_3);<br/>
+  lcdRgb.begin(16, 2);<br/>
+  pinMode(PIN_SIMPLE_BUTTON_4, INPUT);<br/>
+  pinMode(PIN_ULTRASONIC_8, INPUT);<br/>
+  pinMode(PIN_ULTRASONIC_7, INPUT);<br/>
+  servomotor_3.write(20);<br/>
+  lcdRgb.setCursor(2, 0);<br/>
+  lcdRgb.print(String("PLACE LIBRE"));<br/>
+}<br/>
+<br/>
+<em>Ecriture sur l'afficheur et initialisation du servomoteur et de la liste</em></br>
+void loop() {<br/>
+  lcdRgb.setCursor(2, 0);<br/>
+  lcdRgb.print(String("PLACE LIBRE"));<br/>
+  lcdRgb.setCursor(6, 1);<br/>
+  lcdRgb.print(String(liste));<br/>
+  liste = 200;<br/>
+  <em>Partie bouton + barrière</em></br>
+  if (digitalRead(PIN_SIMPLE_BUTTON_4)) {<em> si y'a une préssion sur le bouton</em><br/>
+    servomotor_3.write(90);<em>Le servomoteur se met a l'angle 90 donc la barrière est ouverte</em><br/>
+    delay(1000*10);<em>Attendre 10 seconde</em><br/>
+    servomotor_3.write(20);<em>Retour a la position initial</em><br/>
+  } else {<em>Sinon le servomoteur reste en position fermer si y a pas de préssion sur le bouton</em><br/>
+    servomotor_3.write(20);<br/>
+  }<br/>
+  if (ultrasonic_8.MeasureInCentimeters() < 10) {<em>Si y a un obstacle a moins de 10 cm</em><br/>
+    liste = liste - 1;<em>moins 1 a la liste a l'afficheur</em><br/>
+  }<br/>
+  if (ultrasonic_7.MeasureInCentimeters() < 10) {<br/>
+    liste = liste - 1;<br/>
+  }<br/>
+}</p>
+
+<h3>Algorigramme du code</h3>
+<div class="conteneur conteneur-grille">
+		<img src="images/dp.png" width="450" height="460">
+		<img src="images/db.png" width="450" height="460">
+		</div>
 </div>
 
 <div id="tab4" class="tab-content">
+
+  <h2>Maquette</h2>
+  <div class="image-container">
+    <img src="https://marius220707.github.io/Projet_Tramway/maquette.jpg"
+         alt="jumeau numérique">
+  </div>
+  
   <h2>Modélisation 3D des éléments</h2> 
   <iframe
     src="https://marius220707.github.io//Projet_Tramway/Model3D/parki/parki3Dmodel.html" 
