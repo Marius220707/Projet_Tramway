@@ -33,14 +33,23 @@ function openTab(tabId) {
   <h1>Partie parking</h1>
   
   <div class="tabs">
-  <button class="tab-button active" onclick="openTab('tab1')">Analyse</button>
+  <button class="tab-button active" onclick="openTab('tab0')">Répartition</button>
+  <button class="tab-button" onclick="openTab('tab1')">Analyse</button>
   <button class="tab-button" onclick="openTab('tab2')">Onglet 2</button>
   <button class="tab-button" onclick="openTab('tab3')">Onglet 3</button>
   <button class="tab-button" onclick="openTab('tab4')">Maquette</button>
   <button class="tab-button" onclick="openTab('tab5')">Vidéo</button>
+  
 </div>
 
-<div id="tab1" class="tab-content active">
+<div id="tab0" class="tab-content active">
+  <h2>Répartition des Tâches</h2>
+  <p> Marius: Partie parking (codage de la barrière du parking, codage du nombre de place, 3D du parking à vélo et du parking).<br/>
+  Martin: Partie lumière et du tramway ( codage de la lumière, 3D du guichet, codage de l'arrivé du tramway.</p>
+  
+ </div>
+
+<div id="tab1" class="tab-content">
   <h2>Analyse du cahier des charges</h2>
 
   <h3>Étude préalable</h3>
@@ -50,7 +59,15 @@ function openTab(tabId) {
          alt="Étude préalable">
   </div>
 
-  <p>Bienvenue dans l’onglet 1.</p>
+  <h3>Recherche de solutions deja existante:</h3>
+  <div class="conteneur conteneur-grille">
+		<img src="images/barriere1.jfif">
+		<img src="images/barriere2.jfif">
+		<img src="images/barriere3.png" class="petite-img">
+		<img src="images/barriere3.jfif" class="petite-img">
+		</div>
+	<p>Choix de la 4ème barrière.</p>
+  
 </div>
 
 <div id="tab2" class="tab-content">
@@ -64,13 +81,28 @@ function openTab(tabId) {
 </div>
 
 <div id="tab4" class="tab-content">
+  <h2>Modélisation 3D des éléments</h2> 
+  <iframe
+    src="https://marius220707.github.io//Projet_Tramway/Model3D/parki/parki3Dmodel.html" 
+    width="800" 
+    height="600"
+    frameborder="0"
+    allowfullscreen>
+	
+</iframe>
+
+<p>Voici la 3D du parking.</p>
+
   <h2>Maquette</h2>
   <p>Voici l’onglet 3.</p>
 </div>
 
 <div id="tab5" class="tab-content">
   <h2>Vidéo</h2>
-  <p>Voici l’onglet 3.</p>
+  <video controls class="video-responsive">
+   <source src="https://marius220707.github.io//Projet_Tramway/video/presentation.mp4" type="video/mp4">
+  </video>
+  <p>Vidéo démonstrative du codage du parking.</p>
 </div>
 
  
