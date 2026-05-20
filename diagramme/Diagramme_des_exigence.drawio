@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.3">
+  <diagram name="Page-1" id="xkr4WJhLmHhiuC0gfHT8">
+    <mxGraphModel dx="873" dy="501" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-5" edge="1" parent="1" source="5duDhtwC2zOMQEJpnjeQ-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="5duDhtwC2zOMQEJpnjeQ-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Crée une station de tramway&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;id&amp;nbsp; = 1&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Texte = Création d&#39;une station de tramway avec un parking relais&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="226" x="304" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="Système d&#39;éclairage&lt;div&gt;id = 1.1&lt;/div&gt;&lt;div&gt;Texte = système d&#39;éclairage pour le tramway et la parking&amp;nbsp; qui peut s&#39;allumer et s&#39;éteindre&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="60" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="Passage a niveau&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;div&gt;id = 1.2&lt;/div&gt;&lt;div&gt;Texte = gérer le quai du tramway pour assurée la sécurité des passagers&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="320" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-6" edge="1" parent="1" source="5duDhtwC2zOMQEJpnjeQ-4" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="5duDhtwC2zOMQEJpnjeQ-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="Système de stationnement&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;div&gt;id = 1.3&lt;/div&gt;&lt;div&gt;Texte = gestion du parking pour les voiture et le système de payement&amp;nbsp; &amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="580" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-7" edge="1" parent="1" source="5duDhtwC2zOMQEJpnjeQ-2" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.135;entryY=0.992;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="5duDhtwC2zOMQEJpnjeQ-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="éclairage progressif&amp;nbsp;&lt;div&gt;id = 1.1.1&lt;/div&gt;&lt;div&gt;Texte = Les lumière doivent s&#39;allumer petit a petit&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="10" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-9" edge="1" parent="1" source="5duDhtwC2zOMQEJpnjeQ-8" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="5duDhtwC2zOMQEJpnjeQ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-11" edge="1" parent="1" source="5duDhtwC2zOMQEJpnjeQ-10" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="5duDhtwC2zOMQEJpnjeQ-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="Détection tramway&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;div&gt;id = 1.2.1&lt;/div&gt;&lt;div&gt;Texte =&amp;nbsp; Un système qui détecte a quelle distance ce trouve le tramway pour abaissée les barrière&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="300" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-13" edge="1" parent="1" source="5duDhtwC2zOMQEJpnjeQ-12" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="5duDhtwC2zOMQEJpnjeQ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="Système de stationnement&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;div&gt;id = 1.3.1&lt;/div&gt;&lt;div&gt;Texte =Système de barrière et de payement pour le parking&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="590" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-15" edge="1" parent="1" source="5duDhtwC2zOMQEJpnjeQ-14" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="5duDhtwC2zOMQEJpnjeQ-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="Heure d&#39;arrivée&amp;nbsp;&lt;br&gt;&lt;div&gt;id = 1.2.1.&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Texte =&amp;nbsp; affichage de l&#39;heure d&#39;arrivée du tramway&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="310" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-17" edge="1" parent="1" source="5duDhtwC2zOMQEJpnjeQ-16" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" target="5duDhtwC2zOMQEJpnjeQ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5duDhtwC2zOMQEJpnjeQ-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="Système nombre de place libre/occupée&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;div&gt;id = 1.3.1.1&lt;/div&gt;&lt;div&gt;Texte = Détection du nombre de place libre et affichée le résultats&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="560" y="470" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
